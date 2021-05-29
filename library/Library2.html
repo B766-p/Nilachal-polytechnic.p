@@ -1,0 +1,88 @@
+<html>
+<head>
+ <title>Welcome To LIBRARY</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" href="topnav.css">
+	<link rel="stylesheet" href="sidenav.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <!--side nav bar-->
+<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+	<a href="#">Home</a>
+	<a href="#">Aboutus </a>
+	<a href="#">library</a>
+	<a href="#">Academic</a>
+	<a href="#">alumini</a>
+	<a href="#">gallery</a>
+	<a href="#">22 year journey</a>
+	<a href="#">Contact us</a>
+  </div>
+  
+	<!--top nav bar-->
+	  <div class="di"id="di">
+	  <span style="font-size:30px;cursor:pointer" onclick="openNav()" >&#9776; Menu</span>
+	  
+   <ul>
+	  <li> <a href="#">Home</a></li>
+	   <li><a class="activa" href="#">Library</a></li>
+		   <li><a href="#">Student zone</a></li>
+			   <li> <a href="#">Contact us</a></li>
+				   <li><a href="#">Facilities</a></li>
+				   <li><a  href="https://www.geeksforgeeks.org/how-to-create-an-affix-or-sticky-navbar" href="javascript:void(0)"id="abotus">About us</a></li>
+				   <li><a href="#">Department</a></li>
+			 <img src="logo.jpeg"class="logo">      
+   </ul>
+   </div>
+<header>
+    <div class="title">
+        <h1 data-aos="fade-right" 
+        data-aos-easing="linear"
+        data-aos-duration="1500">WELCOME TO <br>CENTRAL LIBRARY LINK</h1>
+    </div>
+
+    <div class="button">
+        <a href="" class="btn">CENTRAL LIBRARY</a>
+        <a href="#" class="btn">NADL LIBRARY</a>
+        <a href="" class="btn">KITT LIBRARY</a>
+        <a href="#" class="btn">NPDL LIBRARY</a>
+    </header>
+    <!--this is for the side nav bar script--> 
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+    <!--top nav bar script-->
+    <script>
+      window.onscroll = function() {myFunction()};
+      
+      var navbar = document.getElementById("di");
+      var sticky = navbar.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset  >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+      </script>
+      <!--script-->
+<script
+src="https://code.jquery.com/jquery-3.6.0.js"
+></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+    </body>
+</html>
