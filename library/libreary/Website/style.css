@@ -1,0 +1,878 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', cursive;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #0F2027; 
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027); 
+    background: linear-gradient(45deg, #2C5364, #203A43, #0F2027); 
+}
+
+/*----------------  Home page  ---------------*/
+
+/*--------  Loading Section  -------*/
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.loading h1{
+    position: relative;
+    font-size: 40px;
+    color: #bdc3c7;
+    text-transform: uppercase;
+    border-bottom: 5px solid #bdc3c7;
+    letter-spacing: 5px;
+    line-height: 1.2em;
+}
+
+.loading h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #f12711;
+    overflow: hidden;
+    border-bottom: 5px solid #f12711;
+    animation: animate 5s linear;
+}
+
+@keyframes animate{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+/*--------  Navigation Header Section  -------*/
+
+.sec_1{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(img_campus2.jpg); /*rgba(0,0,0,0.75)*/
+    background-size: cover;
+    background-position: center;
+    /*display: table;
+    background-attachment: fixed;*/
+}
+
+.head_part{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+.logo{
+    width: 150px;
+}
+
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.menu a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.menu ul li:hover{
+    background: #ED213A; /* #ED213A */
+    box-shadow: 0 0 5px 0 #ED213A,
+                0 0 25px 0 #ED213A;
+}
+
+.menu ul ul{
+    display: none;
+}
+
+.menu ul ul li{
+    width: 350px;
+    background: #000;
+}
+
+.menu ul li:hover > ul{
+    display: block;
+}
+
+/*--------  Welcome Message Part  -------*/
+
+.wel_message{
+    padding: 8% 0;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.wel_message h2{
+    font-size: 50px;
+    font-weight: 900;
+    padding: 15px;
+    letter-spacing: 5px;
+}
+
+.wel_message h4{
+    font-size: 30px;
+    font-weight: 900;
+    border-radius: 5px;
+    padding: 15px;
+    letter-spacing: 2px;
+}
+
+.wel_message p{
+    font-size: 20px;
+    font-weight: 900;
+    padding: 15px;
+    letter-spacing: 2px;
+}
+
+.wel_message button{
+    margin: 25px;
+    width: 300px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.wel_message button:hover{
+    border: none;
+    box-shadow: 0 0 5px 0 #56ab2f,
+                0 0 25px 0 #56ab2f;
+    background: #56ab2f; 
+    background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  
+    background: linear-gradient(to right, #a8e063, #56ab2f); 
+}
+
+/*--------  About Us Section  --------*/
+
+.sec_2{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgb(255, 253, 253), rgba(255, 255, 255)); /*rgba(0,0,0,0.75)*/
+    background-size: cover;
+    background-position: center;
+    /*display: table;
+    background-attachment: fixed;*/
+}
+
+.main_container{
+    margin: 0 auto;
+    padding-top: 40px;
+    width: 85%;
+}
+
+.container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about_text1{
+    height: 300px;
+    width: 750px;
+    margin: 50px;
+    text-align: left;
+}
+
+.about_text1 h4{
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.about_text1 p{
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.about_text2{
+    height: 400px;
+    width: 750px;
+    margin: 50px;
+    text-align: left;
+}
+
+.about_text2 p{
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.about_text2 h4{
+    padding-top: 10px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.campus_1{
+    width: 700px;
+    box-shadow: 0 0 8px 0 #0F2027;
+}
+
+/*--------  Message From Principal and Vice Principal  --------*/
+
+.sec_3{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(img_campus4.jpg);
+    background-size: cover;
+    background-position: center;
+    /*display: table;
+    background-attachment: fixed;*/
+}
+
+.principal_container{
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.principal_message{
+    padding: 25px;
+    display: flex;
+    padding: 25px;
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-left: 50px;
+    color: #fff;
+}
+
+.principal_message img{
+    width: 500px;
+}
+
+.vice_principal_message{
+    padding: 25px;
+    display: flex;
+    padding: 25px;
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-left: 50px;
+    color: #fff;
+}
+
+.vice_principal_message img{
+    width: 500px;
+}
+
+.part3, .part6{
+    width: 800px;
+}
+
+.part3{
+    text-align: right;
+}
+
+.part4, .part5{
+    padding: 10px;
+    width: 900px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 8px 0 #fff;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.60));
+}
+
+.part4 h4{
+    font-size: 20px;
+}
+
+.part4 p{
+    padding: 30px;
+    text-align: center;
+    word-spacing: 10px;
+}
+
+.part5 h4{
+    font-size: 20px;
+}
+
+.part5 p{
+    padding: 30px;
+    text-align: center;
+    word-spacing: 10px;
+}
+
+/*--------  Course we provide  --------*/
+
+.sec_4{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgb(255, 253, 253), rgba(255, 255, 255)); /*rgba(0,0,0,0.75)*/
+    background-size: cover;
+    background-position: center;
+    display: table;
+    background-attachment: fixed;
+}
+
+.sec_4 h2{
+    letter-spacing: 2px;
+    font-size: 35px;
+    text-align: center;
+    padding: 50px;
+}
+
+.course_container{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course_part{
+    border: 5 solid #000;
+    box-shadow: 0 0 8px 0 #000;
+    width: 400px;
+    height: 700px;
+    text-align: center;
+}
+
+.img_1{
+    width: 400px;
+    height: 300px;
+    background-image: url(img_computer.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img_2{
+    width: 400px;
+    height: 300px;
+    background-image: url(img_civil.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img_3{
+    width: 400px;
+    height: 300px;
+    background-image: url(img_electrical.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img_4{
+    width: 400px;
+    height: 300px;
+    background-image: url(img_mechanical.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.course_description h4{
+    padding-top: 25px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.course_description p{
+    padding: 25px;
+}
+
+.course_description button{
+    width: 250px;
+    height: 40px;
+    margin: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    background: #fff;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 0 0 8px 0 #000;
+    border: none;
+}
+
+.course_description button:hover{
+    color: #fff;
+    background: #000;
+    box-shadow: 0 0 8px 0 #000;
+}
+
+/*--------  Why us  --------*/
+
+.sec_5{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(img_student.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.diploma_part{
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    justify-content: space-around;
+    margin-top: 25px;
+    padding: 15px;
+}
+
+.diploma_part h2{
+    letter-spacing: 2px;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.diploma_part p{
+    word-spacing: 2px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.des_1{
+    border-radius: 10px;
+    border: 2px solid #833ab4;
+    text-align: left;
+    padding: 10px;
+    box-shadow: 0 0 8px 0 #833ab4;
+    margin: 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.60));
+}
+
+.des_2{
+    border-radius: 10px;
+    border: 2px solid #fd1d1d;
+    text-align: left;
+    padding: 10px;
+    box-shadow: 0 0 8px 0 #fd1d1d;
+    margin: 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.60));
+}
+
+.des_3{
+    border-radius: 10px;
+    border: 2px solid #fcb045;
+    text-align: left;
+    padding: 10px;
+    box-shadow: 0 0 8px 0 #fcb045;
+    margin: 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.60));
+}
+
+/*--------  Our Facilities  --------*/
+
+.sec_6{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgb(255, 253, 253), rgba(255, 255, 255)); /*rgba(0,0,0,0.75)*/
+    background-size: cover;
+    background-position: center;
+    /*display: table;
+    background-attachment: fixed;*/
+}
+
+.sec_6 h2{
+    letter-spacing: 2px;
+    font-size: 35px;
+    text-align: center;
+    padding: 50px;
+}
+
+.facilities_container{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.facilities_part{
+    border: 5 solid #000;
+    box-shadow: 0 0 8px 0 #000;
+    width: 550px;
+    height: 730px;
+    text-align: center;
+}
+
+.img_11{
+    width: 550px;
+    height: 400px;
+    background-image: url(img_lab.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img_22{
+    width: 550px;
+    height: 400px;
+    background-image: url(img_playground.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img_33{
+    width: 550px;
+    height: 400px;
+    background-image: url(img_classroom.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.facilities_description h4{
+    padding: 20px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.facilities_description p{
+    padding: 20px;
+    text-align: left;
+}
+
+/*--------  Footer  --------*/
+
+.sec_7{
+    width: 100%;
+    height: auto;
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027); 
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background-size: cover;
+    background-position: center;
+}
+
+.footer_base{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+.base_part1{
+    width: 400px;
+    height: 450px;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.base_part2{
+    width: 200px;
+    height: 450px;
+    text-align: left;
+    padding: 10px;
+    color: #fff;
+}
+
+.base_part2 h3{
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.base_part2 hr{
+    margin-top: 10px;
+    width: 70px;
+    height: 3px;
+    border: none;
+    background: #fff;
+}
+
+.base_part3{
+    width: 400px;
+    height: 450px;
+    text-align: left;
+    padding: 10px;
+    color: #fff;
+}
+
+.base_part3 h3{
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.base_part3 hr{
+    margin-top: 10px;
+    width: 70px;
+    height: 3px;
+    border: none;
+    background: #fff;
+}
+
+.contact_base p{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.contact_base ul li{
+    list-style: none;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.contact_base ul li span:nth-child(1){
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.contact_base ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact_base ul li i{
+    color: #fff;
+    font-size: 25px;
+}
+
+.base_part4{
+    width: 500px;
+    height: 450px;
+    text-align: left;
+    padding: 10px;
+    color: #fff;
+}
+
+.base_part4 h3{
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.base_part4 hr{
+    margin-top: 10px;
+    width: 70px;
+    height: 3px;
+    border: none;
+    background: #fff;
+}
+
+.base_part1 p{
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.footer_logo{
+    width: 200px;
+}
+
+.social_icons{
+    padding: 25px;
+}
+
+.social_icons ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 8px 12px;
+}
+
+.social_icons ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.social_icons ul li a:hover{
+    box-shadow: 0 0 8px 0 #fff;
+}
+
+.social_icons ul li i{
+    color: #fff;
+    font-size: 25px;
+}
+
+.footer_menu ul li{
+    list-style: none;
+    padding: 5px;
+}
+
+.footer_menu ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer_menu ul li a:hover{
+    text-decoration: underline;
+}
+
+.feeback{
+    border: none;
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    color: #000;
+}
+
+.feeback_area{
+    border: none;
+    width: 400px;
+    height: 100px;
+    padding: 10px;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    color: #000;
+}
+
+.feeback:hover{
+    box-shadow: 0 0 8px 0 #fff;
+}
+
+.feeback_area:hover{
+    box-shadow: 0 0 8px 0 #fff;
+}
+
+.send{
+    width: 400px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.send:hover{
+    box-shadow: 0 0 8px 0 #000;
+}
+
+.copyeright{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.60));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----------------  Department page  ---------------*/
+
+/*--------  Navigation Header Section  -------*/
+
+.sec_8{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(img_graduation.jpg); /*rgba(0,0,0,0.75)*/
+    background-size: cover;
+    background-position: center;
+}
+
+.headline{
+    text-align: center;
+    color: #fff;
+}
+
+.headline h1{
+    letter-spacing: 2px;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+/*-------- Department Description Section --------*/
+
+.dept_desc{
+    margin: 25px;
+}
+
+.dept_row{
+    display: flex;
+}
+
+.dept_col{
+    border-radius: 10px;
+    text-align: left;
+    background: #fff3f3;
+    margin: 25px;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.dept_col img{
+    width: 150px;
+    margin-right: 25px;
+    border-radius: 5px;
+}
+
+.dept_col h3{
+    letter-spacing: 5px;
+    margin: 2px;
+}
+
+.dept_col p{
+    letter-spacing: 2px;
+    margin: 2px;
+}
+
+.dept_menu{
+    margin: 25px;
+    padding: 25px;
+    background: #fff3f3;
+    border-radius: 10px;
+}
+
+.dept_menu h4{
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+}
+
+.dept_menu ul li{
+    list-style: square;
+}
+
+.dept_menu ul li a{
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.dept_menu ul li a:hover{
+    text-decoration: underline;
+}

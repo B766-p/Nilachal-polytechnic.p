@@ -1,0 +1,122 @@
+<DOCTYPE html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resoponsive Contact Us Page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="topnav.css">
+	<link rel="stylesheet" href="sidenav.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!--side nav bar-->
+<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+	<a href="#">Home</a>
+	<a href="ABOUT US/about.html">About Us </a>
+	<a href="#">Library</a>
+	<a href="#">Academy</a>
+	<a href="#">Alumini</a>
+	<a href="Gallery/Gallery.html">Gallery</a>
+	<a href="#">22 Year Journey</a>
+	<a href="#">Contact Us</a>
+	<a href="department/department.html">Department</a>
+  </div>
+  
+	<!--top nav bar-->
+	  <div class="di"id="di">
+	  <span style="font-size:30px;cursor:pointer" onclick="openNav()" >&#9776; Menu</span>
+	  
+   <ul>
+	  <li> <a href="#">Home</a></li>
+	   <li><a href="#">Library</a></li>
+		   <li><a href="#">Student Zone</a></li>
+			   <li> <a class="activa" href="#">Contact Us</a></li>
+				   <li><a href="ABOUT US/Facilities.html">Facilites</a></li>
+				   <li><a  href="ABOUT US/about.html">About Us</a></li>
+				   <li><a href="department/department.html">Department</a></li>                
+   </ul>
+   </div>
+	<section class="Contact">
+		<div id="top-header">
+			<!-- Logo -->
+			<div id="Logo">
+				<img src=""/>
+			</div>
+		</div>
+		<div class="content">
+			<h2><u>Contact Us</u></h2>
+		</div>
+		<div class="container">
+			<div class="contactInfo">
+				<div class="box">
+					<div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+					<div class="text">
+					<h3>Address</h3>
+					<p>Nilachal Polytechnic 540/1780,<br>Patharagadia Near Srikharachandi Temple,<br>Post: KIIT,<br>Bhubaneswar-751024</p>					
+					</div>
+				</div>
+				<div class="box">
+					<div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+					<div class="text">
+						<h3>Phone</h3>
+						<p>943-901-2444<br>943-703-7989 (M)</p>
+					</div>
+				</div>
+				<div class="box">
+					<div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+					<div class="text">
+						<h3>Email</h3>
+						<p>info@nilachalpolytechnic.org<br>http://www.nilachalpolytechnic.org</p>
+					</div>
+				</div>
+			</div>
+			<div class="contactForm">
+				<form>
+					<h2><u>Leave Us a Message</u></h2>
+					<div class="inputBox">
+						<input type="text" name="" required="required">
+						<span>Full Name</span>
+					</div>
+					<div class="inputBox">
+						<input type="text" name="" required="required">
+						<span>Email</span>
+					</div>
+				    <div class="inputBox">
+						<textarea required="required"></textarea>
+						<span>Type your Message...</span>
+					</div>
+					<div class="inputBox">
+						<input type="Submit" name="" value="Send">
+					</div>
+				</form>	
+			</div>
+		</div>
+	</section>
+	<!--this is for the side nav bar script--> 
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+    <!--top nav bar script-->
+    <script>
+      window.onscroll = function() {myFunction()};
+      
+      var navbar = document.getElementById("di");
+      var sticky = navbar.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset  >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+      </script>
+</body>
+</html>
